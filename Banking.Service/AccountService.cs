@@ -63,8 +63,8 @@ namespace Banking.Service
             var from = _repository.Get(transferAccount.FromAccountNumber);
             var to = _repository.Get(transferAccount.ToAccountNumber);
 
-            from.Balance = from.Balance - transferAccount.Amount;
-            to.Balance = to.Balance + transferAccount.Amount;
+            from.Balance -= transferAccount.Amount;
+            to.Balance += transferAccount.Amount;
 
             _repository.UpdateBalance(from.AccountNumber, from.Balance);
             _repository.UpdateBalance(to.AccountNumber, to.Balance);
