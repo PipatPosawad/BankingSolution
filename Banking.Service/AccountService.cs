@@ -31,7 +31,7 @@ namespace Banking.Service
                 Id = Guid.NewGuid(),
                 FirstName = createAccount.FirstName,
                 LastName = createAccount.LastName,
-                Balance = 0
+                Balance = createAccount.Amount
             };
 
             var result = _repository.Add(newAccount);

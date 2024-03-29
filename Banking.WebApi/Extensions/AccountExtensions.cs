@@ -24,12 +24,25 @@ namespace Banking.WebApi.Extensions
             };
         }
 
+        public static CreateAccountResultDto ToCreateAccountResultDto(this Account account)
+        {
+            return new CreateAccountResultDto()
+            {
+                AccountNumber = account.AccountNumber,
+                Balance = account.Balance,
+                FirstName = account.FirstName,
+                LastName= account.LastName,
+            };
+        }
+
         public static DepositAccountResultDto ToDepositAccountResultDto(this Account account)
         {
             return new DepositAccountResultDto()
             {
                 AccountNumber = account.AccountNumber,
-                Amount = account.Balance
+                Balance = account.Balance,
+                FirstName = account.FirstName,
+                LastName = account.LastName
             };
         }
 

@@ -15,7 +15,7 @@ POST {{Banking.WebApi_HostAddress}}/api/v1/account/deposit/
 Content-Type: application/json
 
 {
-  "accountNumber": "NL96KVCB0030100730",
+  "accountNumber": "NL87IUTW1900990570",
   "amount": "500"
 }
 
@@ -25,8 +25,8 @@ POST {{Banking.WebApi_HostAddress}}/api/v1/account/transfer/
 Content-Type: application/json
 
 {
-  "fromAccountNumber": "NL23MRVI1051083554",
-  "toAccountNumber": "NL96KVCB0030100730",
+  "fromAccountNumber": "NL87IUTW1900990570",
+  "toAccountNumber": "NL37BMNE6490800710",
   "amount": "100"
 }
 

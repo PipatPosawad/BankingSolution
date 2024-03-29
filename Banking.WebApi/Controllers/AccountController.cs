@@ -27,7 +27,7 @@ namespace Banking.WebApi.Controllers
 
             var newAccount = await _accountService.CreateAccountAsync(createAccountDto.ToCreateAccount());
 
-            return Ok(newAccount);
+            return Ok(newAccount.ToCreateAccountResultDto());
         }
 
         [HttpPost(template: "deposit")]
