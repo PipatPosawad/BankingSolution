@@ -1,6 +1,33 @@
 @Banking.WebApi_HostAddress = http://localhost:5078
 
-GET {{Banking.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{Banking.WebApi_HostAddress}}/api/v1/account/
+Content-Type: application/json
+
+{
+  "firstName": "pipat",
+  "lastName": "posawad",
+  "amount": 1000
+}
+
+###
+
+POST {{Banking.WebApi_HostAddress}}/api/v1/account/deposit/
+Content-Type: application/json
+
+{
+  "accountNumber": "NL96KVCB0030100730",
+  "amount": "500"
+}
+
+###
+
+POST {{Banking.WebApi_HostAddress}}/api/v1/account/transfer/
+Content-Type: application/json
+
+{
+  "fromAccountNumber": "NL23MRVI1051083554",
+  "toAccountNumber": "NL96KVCB0030100730",
+  "amount": "100"
+}
 
 ###
