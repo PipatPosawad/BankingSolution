@@ -15,7 +15,7 @@ POST {{Banking.WebApi_HostAddress}}/api/v1/account/deposit/
 Content-Type: application/json
 
 {
-  "accountNumber": "NL02UHQQ8002900291",
+  "accountNumber": "NL11EZQW5759040389",
   "amount": "1000"
 }
 
@@ -25,9 +25,9 @@ POST {{Banking.WebApi_HostAddress}}/api/v1/account/transfer/
 Content-Type: application/json
 
 {
-  "fromAccountNumber": "NL87IUTW1900990570",
-  "toAccountNumber": "NL37BMNE6490800710",
-  "amount": "100"
+  "fromAccountNumber": "NL11EZQW5759040389",
+  "toAccountNumber": "NL92GDAV6888200556",
+  "amount": "900"
 }
 
 ###

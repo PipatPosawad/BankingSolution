@@ -39,10 +39,12 @@ namespace Banking.Repository
             _logger.LogInformation("Deposit account {0} for {1}", accountNumber, money.ToString());
 
             var account = Get(accountNumber);
-            storage.Remove(account);
-
             account.Balance = money;
-            storage.Add(account);
+
+            //storage.Remove(account);
+
+            //account.Balance = money;
+            //storage.Add(account);
         }
     }
 }
