@@ -6,7 +6,7 @@ Content-Type: application/json
 {
   "firstName": "pipat",
   "lastName": "posawad",
-  "amount": 1000
+  "amount": 0
 }
 
 ###
@@ -15,8 +15,8 @@ POST {{Banking.WebApi_HostAddress}}/api/v1/account/deposit/
 Content-Type: application/json
 
 {
-  "accountNumber": "NL87IUTW1900990570",
-  "amount": "500"
+  "accountNumber": "NL02UHQQ8002900291",
+  "amount": "1000"
 }
 
 ###

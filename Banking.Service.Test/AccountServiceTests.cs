@@ -34,7 +34,35 @@ namespace Banking.Service.Test
         [Fact]
         public async Task DepositAccount_ReturnsDepositResult_WhenOperationIsSuccesful()
         {
+            // Arrange
+            var accountNumber = "OIJOIFDS";
+            var amount = 1000;
+            var balance = 0;
+            var fee = 1;
+            var balanceAfterDeposit = balance + amount - fee;
 
+            var depositAccount = new DepositAccount()
+            {
+                AccountNumber = accountNumber,
+                Amount = amount
+            };
+
+            var account = new Account()
+            {
+                AccountNumber = accountNumber,
+                Balance = balance
+            };
+
+            _mockAccountRepository.Setup(x => x.Get(It.IsAny<string>()))
+                .Returns(account);
+
+            // Act
+            var result = _accountService.DepositAccount(depositAccount);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(accountNumber, result.AccountNumber);
+            Assert.Equal(balanceAfterDeposit, result.Balance);
         }
 
         [Fact]

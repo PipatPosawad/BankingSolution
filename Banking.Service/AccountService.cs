@@ -46,9 +46,9 @@ namespace Banking.Service
         {
             var account = _repository.Get(depositAccount.AccountNumber);
 
-            var balance = account.Balance + (depositAccount.Amount - Fee(depositAccount.Amount));
+           account.Balance += (depositAccount.Amount - Fee(depositAccount.Amount));
 
-            _repository.UpdateBalance(account.AccountNumber, balance);
+            _repository.UpdateBalance(account.AccountNumber, account.Balance);
 
             return account;
         }
